@@ -8,18 +8,43 @@
         body {
             font-family: Arial, sans-serif;
             margin: 20px;
+            background-color: #f4f4f4;
+            transition: background-color 0.5s ease-in-out;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #3498db;
+            color: #fff;
         }
 
         h1 {
             color: #333;
+            transition: color 0.5s ease-in-out;
         }
 
         h2 {
             color: #555;
+            transition: color 0.5s ease-in-out;
         }
 
         p {
             color: #777;
+            transition: color 0.5s ease-in-out;
+        }
+
+        section {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease-in-out;
+        }
+
+        section:hover {
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
         }
     </style>
 </head>
@@ -47,6 +72,27 @@
         <h2>Lĩnh Vực Nghề Nghiệp</h2>
         <p><strong>Mục tiêu nghề nghiệp:</strong> Tìm kiếm cơ hội phát triển sự nghiệp trong lĩnh vực Cơ Điện Tử, đặc biệt là trong các vai trò Hardware Engineer, Firmware Engineer, và Software Development.</p>
     </section>
+
+    <script>
+        // JavaScript để thay đổi màu sắc và chuyển động
+        document.addEventListener("DOMContentLoaded", function() {
+            document.body.addEventListener("mouseover", function() {
+                document.body.style.backgroundColor = "#e8e8e8";
+                document.querySelector("h1").style.color = "#3498db";
+                document.querySelectorAll("h2, p").forEach(function(element) {
+                    element.style.color = "#555";
+                });
+            });
+
+            document.body.addEventListener("mouseout", function() {
+                document.body.style.backgroundColor = "#f4f4f4";
+                document.querySelector("h1").style.color = "#333";
+                document.querySelectorAll("h2, p").forEach(function(element) {
+                    element.style.color = "#777";
+                });
+            });
+        });
+    </script>
 
 </body>
 </html>
